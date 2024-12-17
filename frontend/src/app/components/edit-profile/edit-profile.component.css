@@ -1,0 +1,69 @@
+.container-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  width: 200px;
+  border-radius: 10em;
+  align-items: center;
+}
+
+.avatarOut {
+  border: 1px solid rgb(209, 209, 209);
+  background-color: rgb(222, 222, 222);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
+  border-radius: 10em;
+}
+
+.edit-icon i {
+  font-size: 20px;
+  color: gray;
+}
+
+@media (max-width: 800px) {
+  .avatarOut {
+    border: 1px solid rgb(209, 209, 209);
+    background-color: rgb(222, 222, 222);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 10px 0 10px;
+    padding: 30px;
+    border-radius: 10em;
+  }
+
+  .avatar img {
+    width: 150px;
+    border-radius: 10em;
+    align-items: center;
+  }
+}
+
+.avatarOut i {
+  color: greY;
+  font-size: 40px;
+}
+
+@media (max-width: 1000px) {
+  .avatar {
+    width: 20%;
+    height: 20%;
+    border-radius: 10em;
+    margin: 10px 10px 0 10px;
+    align-items: center;
+  }
+}
+
+.borde {
+  border: 1px solid rgba(128, 128, 128, 0.394);
+  margin: 10px 10px 15px 0px;
+}

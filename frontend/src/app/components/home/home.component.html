@@ -1,0 +1,39 @@
+<div class="animation-container">
+  <div id="body" [@slideInOut]="true">
+    <header class="header">
+      <div class="search-container">
+        <div class="input-group search-box">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Buscar servicios o negocios"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="card">
+        <img
+          src="/assets/images/header-home/shop.jpeg"
+          alt="Comercio"
+          class="card-image"
+        />
+        <h1 class="card-title">Comercios</h1>
+      </div>
+
+      <div class="card">
+        <img
+          src="/assets/images/header-home/th.jpeg"
+          alt="Estética"
+          class="card-image"
+        />
+        <h1 class="card-title">Estética</h1>
+      </div>
+    </main>
+  </div>
+</div>

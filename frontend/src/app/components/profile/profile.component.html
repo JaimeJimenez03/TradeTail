@@ -1,0 +1,52 @@
+@if (!editProfile) {
+<div [@slideInOut]="true">
+  <header>
+    <div class="container-avatar">
+      <div>
+        @if (user.avatar === "" || user.avatar == undefined) {
+        <div class="avatarOut">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        }@else {
+
+        <div class="avatar m-4 me-0">
+          <img src="/assets/images/header-home/shop.jpeg" alt="Avatar" />
+        </div>
+        }
+      </div>
+
+      <div class="m-4">
+        <h1>{{ user.name }} {{ user.first_name }}</h1>
+        <h5 style="color: rgb(163, 163, 163); font-weight: normal">
+          {{ user.telephone_number }}
+        </h5>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container-main">
+      <button (click)="editProfile = true" class="buttons border-bottom-0">
+        <h5>Perfil</h5>
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <button class="buttons border-bottom-0">
+        <h5>Comercios Guardados</h5>
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <button (click)="logout()" class="buttons">
+        <h5>Cerrar Sesión</h5>
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </main>
+</div>
+}@else {
+<div>
+  <button type="button" class="button-profile" (click)="editProfile = false">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+  <app-edit-profile [user]="user" (user)="(user)"></app-edit-profile>
+</div>
+}

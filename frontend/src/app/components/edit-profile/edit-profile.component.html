@@ -1,0 +1,59 @@
+<div [@slideInOut]="true" style="margin-left: 20px">
+  <div class="container-avatar">
+    <div>
+      @if (user.avatar === "" || user.avatar == undefined) {
+      <div class="avatarOut">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="edit-icon">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </div>
+      }@else {
+
+      <div class="avatar m-4 me-0">
+        <img src="/assets/images/header-home/shop.jpeg" alt="Avatar" />
+        <div class="edit-icon">
+          <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="m-4 mt-5">
+    <div class="d-flex justify-content-between mt-3 mb-3">
+      <h2 class="ms-2">{{ user.email }}</h2>
+      <button type="button" style="background: 0; border: 0" class="edit-icon">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+    </div>
+
+    <div class="border"></div>
+
+    <div class="d-flex justify-content-between mt-3 mb-3">
+      <h2 class="ms-2">{{ user.username }}</h2>
+      <button type="button" style="background: 0; border: 0" class="edit-icon">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+    </div>
+
+    <div class="border"></div>
+    <div class="d-flex justify-content-between mt-3 mb-3">
+      <h2 class="ms-2">{{ user.name }} {{ user.first_name }}</h2>
+      <button type="button" style="background: 0; border: 0" class="edit-icon">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+    </div>
+
+    <div class="border"></div>
+
+    <div class="d-flex justify-content-between mt-3 mb-3">
+      <h2 class="ms-2">{{ user.telephone_number }}</h2>
+      <button type="button" style="background: 0; border: 0" class="edit-icon">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+    </div>
+
+    <div class="border"></div>
+  </div>
+</div>

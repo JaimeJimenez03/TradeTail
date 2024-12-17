@@ -1,0 +1,10 @@
+<div>
+  @if (home) {
+  <app-home></app-home>
+  }@else if (orders) {
+  <app-orders></app-orders>
+  }@else if (profile) {
+  <app-profile [user]="user" (user)="(user)"></app-profile>
+  }
+</div>
+<app-footer (view)="view($event)"></app-footer>
