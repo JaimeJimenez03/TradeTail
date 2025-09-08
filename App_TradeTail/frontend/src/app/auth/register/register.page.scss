@@ -1,0 +1,206 @@
+ion-content {
+  --background: none; 
+  background: linear-gradient(235deg, #2c1f0f, #7a4e2d, #d6a76c);
+  background-color: rgb(170, 170, 170);
+  background-size: 400% 400%;
+  animation: waveGradient 5s ease infinite;
+}
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.register-container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.299);
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 87%;
+  height: 80%; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 16px;
+
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+.shop-form {
+  flex: 1;
+  overflow-y: auto;
+}
+.header-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 70px;
+  height: 70px;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: "Luckiest Guy",;
+  font-style: italic;
+}
+
+.ion-item{
+  margin-top: 30px;
+}
+
+.ion-item ion-input{
+  border: 1px solid rgba(0, 0, 0, 0.172);
+  border-radius: 12px;
+  margin-top: 10px;
+  --padding-start: 16px;
+  --padding-end: 10px;                        
+}
+ion-note p{
+  margin: 30px 0 30px 0 ;
+}
+
+.forgotPass {
+  text-align: end;
+  margin: 10px 10px 15px 0;
+  font-weight: bold;
+  color:  #3b82f6;
+  font-size: 14px;
+}
+
+
+.showPassword {
+  color: rgb(115, 115, 115);
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.register-text {
+  margin: 0;
+  font-weight: 500;
+}
+
+.register-button {
+  --color: #3b82f6; 
+  font-weight: bold;
+  text-transform: none;
+  padding: 0;
+  margin: 20px 0 0 0px;
+}
+
+.button-register {
+  margin-top: 30px;
+  --background: #575757; 
+  --color: #ffffff;      
+  --border-radius: 12px;
+  --padding-top: 13px;
+  --padding-bottom: 13px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: none;
+}
+
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/*ion-label {
+  font-weight: 600;
+  color: #333;
+}
+
+ion-input {
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.button-register {
+  --background: #575757; 
+  --color: #ffffff;      
+  --border-radius: 12px;
+  --padding-top: 13px;
+  --padding-bottom: 13px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: none;
+}
+
+ion-note {
+  margin: 12px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+ion-router-link {
+  color: var(--ion-color-primary);
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.register-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.shop-form {
+  width: 100%;
+}
+
+ion-item {
+  margin-bottom: 16px;
+}
+
+ion-note {
+  margin: 12px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+ion-button {
+  margin-top: 24px;
+}
+*/

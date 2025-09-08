@@ -1,0 +1,155 @@
+<ion-content>
+  <div class="center-wrapper">
+    <div class="register-container">
+      <form
+        #shopForm="ngForm"
+        (ngSubmit)="onSubmit()"
+        class="shop-form"
+        enctype="multipart/form-data"
+      >
+        <div class="header-container">
+          <div class="logo-container">
+            <img src="assets/logo_tradetail_negro_sinFondo.png" alt="Logo" />
+          </div>
+          <h1>Registro</h1>
+        </div>
+
+        <div class="ion-item">
+          <ion-icon class="mail-outline" slot="stacked"></ion-icon>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input
+            type="email"
+            placeholder="usuario@gmail.com"
+            [(ngModel)]="userRegister.email"
+            required
+            name="email"
+          ></ion-input>
+        </div>
+
+        <div class="ion-item">
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input
+            type="name"
+            placeholder="...."
+            [(ngModel)]="userRegister.name"
+            required
+            name="name"
+          ></ion-input>
+        </div>
+
+        <div class="ion-item">
+          <div style="display: flex; gap: 12px; width: 100%">
+            <ion-input
+              type="text"
+              name="first_name"
+              required
+              [(ngModel)]="userRegister.first_name"
+              placeholder="Apellido 1"
+            ></ion-input>
+            <ion-input
+              type="text"
+              name="last_name"
+              required
+              [(ngModel)]="userRegister.last_name"
+              placeholder="Apellido 2"
+            ></ion-input>
+          </div>
+        </div>
+
+        <div class="ion-item">
+          <ion-label position="stacked">Nombre de Usuario</ion-label>
+          <ion-input
+            type="username"
+            placeholder="...."
+            [(ngModel)]="userRegister.username"
+            required
+            name="username"
+          ></ion-input>
+        </div>
+
+        <div class="ion-item">
+          <ion-label position="stacked">Teléfono</ion-label>
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+            "
+          >
+            <h5 style="font-weight: bold; margin-right: 10px">+34</h5>
+            <ion-input
+              type="telephone_number"
+              placeholder="000000000"
+              [(ngModel)]="userRegister.telephone_number"
+              required
+              name="telephone_number"
+              maxlength="9"
+            ></ion-input>
+          </div>
+        </div>
+
+        <div class="ion-item">
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input
+            [type]="showPassword ? 'text' : 'password'"
+            placeholder="********"
+            [(ngModel)]="userRegister.password"
+            required
+            name="password"
+            ><ion-button
+              fill="clear"
+              slot="end"
+              (click)="togglePassword()"
+              aria-label="Mostrar/ocultar"
+              class="showPassword"
+            >
+              <ion-icon
+                slot="icon-only"
+                [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"
+              ></ion-icon> </ion-button
+          ></ion-input>
+        </div>
+
+        <div class="ion-item">
+          <ion-select
+            [(ngModel)]="selectedProvince"
+            name="province"
+            (ionChange)="onProvinceChange($event)"
+            placeholder="Selecciona provincia"
+            required
+          >
+            @for (province of provinces; track $index) {
+            <ion-select-option [value]="province.id">
+              {{ province.name }}
+            </ion-select-option>
+            }
+          </ion-select>
+        </div>
+
+        <div class="ion-item">
+          <ion-select
+            [(ngModel)]="userRegister.municipality_id"
+            name="municipality_id"
+            placeholder="Selecciona municipio"
+            required
+          >
+            @for (municipality of filteredMunicipalities; track $index) {
+            <ion-select-option [value]="municipality">
+              {{ municipality.name }}
+            </ion-select-option>
+            }
+          </ion-select>
+        </div>
+
+        <ion-button
+          expand="block"
+          type="submit"
+          [disabled]="!shopForm.form.valid"
+          class="button-register"
+        >
+          Registrarse
+        </ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,29 @@
+ion-header, ion-content, ion-toolbar{
+  --background: none; 
+    background-color: rgb(204, 204, 204);
+}
+
+ion-content {
+    margin-top: 10100px;
+}
+
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  margin-top: 20%   
+}
+
+
+
+

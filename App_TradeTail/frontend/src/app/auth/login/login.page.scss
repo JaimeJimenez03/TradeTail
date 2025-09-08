@@ -1,0 +1,221 @@
+ion-content {
+  --background: none; 
+  background: linear-gradient(235deg, #2c1f0f, #7a4e2d, #d6a76c);
+  background-color: rgb(170, 170, 170);
+  background-size: 400% 400%;
+  animation: waveGradient 5s ease infinite;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+
+.login-container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.299);
+  padding: 30px;
+  max-width: 400px;
+  width: 87%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.tittles {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.tittles h1 {
+  text-align: center;
+  font-family: "Luckiest Guy",;
+  font-style: italic;
+}
+
+ion-label{
+  font-weight: bold;
+  font-size:  small;
+  color: rgb(68, 68, 68);
+  padding-left: 20px;
+
+}
+
+.ion-item{
+  margin-top: 30px;
+}
+
+.ion-item ion-input{
+  border: 1px solid rgba(0, 0, 0, 0.172);
+  border-radius: 12px;
+  margin-top: 10px;
+  --padding-start: 16px;
+  --padding-end: 10px;                        
+}
+
+ion-note p{
+  margin: 30px 0 30px 0 ;
+}
+
+.forgotPass {
+  text-align: end;
+  margin: 10px 10px 15px 0;
+  font-weight: bold;
+  color:  #3b82f6;
+  font-size: 14px;
+}
+
+
+.showPassword {
+  color: rgb(115, 115, 115);
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.register-text {
+  margin: 0;
+  font-weight: 500;
+}
+
+.register-button {
+  --color: #3b82f6; 
+  font-weight: bold;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-login {
+  --background: #575757; 
+  --color: #ffffff;      
+  --border-radius: 12px;
+  --padding-top: 13px;
+  --padding-bottom: 13px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2); 
+}
+
+.divider span {
+  padding: 0 12px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4); 
+  font-size: 0.9rem;
+}
+
+.button-GA {
+  --background: #c3c3c3; 
+  --color: #000000;         
+  --border-radius: 12px;
+  margin-top: 10px
+}
+
+
+
+
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 24px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ion-color-primary);
+  margin-bottom: 32px;
+  font-size: 2.5rem;
+}
+
+
+.input-item {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  --background: #f9f9f9;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+ion-label {
+  font-weight: 600;
+  color: #333;
+}
+
+ion-input {
+  padding: 12px;
+  font-size: 1rem;
+}
+
+ion-button {
+  margin-top: 24px;
+  --border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+ion-note {
+  margin: 12px 0;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+ion-router-link {
+  color: var(--ion-color-primary);
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}*/

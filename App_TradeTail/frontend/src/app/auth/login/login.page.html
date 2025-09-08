@@ -1,0 +1,83 @@
+<ion-content fullscreen="true">
+  <div class="center-wrapper">
+    <div class="login-container">
+      <div class="logo-container">
+        <img src="assets/logo_tradetail_negro_sinFondo.png" alt="Logo" />
+      </div>
+      <div class="tittles">
+        <h1>Bienvenido</h1>
+        <h6>Por Favor, rellena los campos</h6>
+      </div>
+
+      <div class="ion-item">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input
+          type="email"
+          placeholder="usuario@gmail.com"
+          [(ngModel)]="auth.email"
+          required
+          name="email"
+        ></ion-input>
+      </div>
+      <div class="ion-item">
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="********"
+          [(ngModel)]="auth.password"
+          required
+          name="password"
+          ><ion-button
+            fill="clear"
+            slot="end"
+            (click)="togglePassword()"
+            aria-label="Mostrar/ocultar"
+            class="showPassword"
+          >
+            <ion-icon
+              slot="icon-only"
+              [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"
+            ></ion-icon> </ion-button
+        ></ion-input>
+      </div>
+      <div class="forgotPass">Recuperar Contraseña</div>
+      <ion-note color="danger" *ngIf="databaseError" class="ion-text-center">
+        <p>Aplicación en mantenimiento</p>
+      </ion-note>
+      <ion-note color="danger" *ngIf="pswI" class="ion-text-center">
+        <p>Email o Contraseña Incorrecta</p>
+      </ion-note>
+      <ion-note color="danger" *ngIf="otherError" class="ion-text-center">
+        <p>Error Inesperado. Inténtelo más tarde.</p>
+      </ion-note>
+
+      <ion-button
+        class="button-login"
+        expand="block"
+        (click)="login()"
+        [disabled]="!auth.email || !auth.password"
+      >
+        Iniciar Sesión
+      </ion-button>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <ion-button class="button-GA" expand="block">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-button>
+
+      <ion-button class="button-GA" expand="block">
+        <ion-icon name="logo-apple"></ion-icon>
+      </ion-button>
+
+      <div class="register-container">
+        <p class="register-text">¿No tienes cuenta?</p>
+        <ion-button fill="clear" class="register-button" (click)="register()">
+          Regístrate
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
